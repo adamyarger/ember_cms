@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>EmberCms</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>EmberCms</title>
+	  <%= stylesheet_link_tag    'application' %>
+	  <%= javascript_include_tag 'application' %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
 
-<%= yield %>
-
-</body>
+	<%= yield %>
+	<div id="ember-app"></div>
+	</body>
 </html>

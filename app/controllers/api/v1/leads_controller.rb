@@ -7,7 +7,7 @@ class Api::V1::LeadsController < ApplicationController
 	end
 
 	def show
-		respond_with lead
+		render json: lead
 	end
 
 	def create
