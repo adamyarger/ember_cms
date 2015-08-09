@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'active_model_serializers'
 gem 'ember-cli-rails'
+gem 'faker'
 
 # design
 gem "font-awesome-rails"
@@ -26,6 +27,5 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'faker'
 end
 
