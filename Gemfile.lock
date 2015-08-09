@@ -124,6 +124,8 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     refills (0.1.0)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     rspec-core (3.0.4)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.4)
@@ -190,6 +192,7 @@ DEPENDENCIES
   normalize-rails
   rails (= 4.2.0)
   refills
+  responders
   rspec-rails (~> 3.0.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

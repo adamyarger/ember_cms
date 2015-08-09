@@ -1,8 +1,9 @@
 class Api::V1::LeadsController < ApplicationController
-	respond_to :json
+	
 
 	def index
-		respond_with Lead.all
+		@leads = Lead.all
+		render json: @leads 
 	end
 
 	def show

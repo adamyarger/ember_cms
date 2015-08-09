@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'active_model_serializers'
 gem 'ember-cli-rails'
 gem 'faker'
+gem 'responders'
 
 # design
 gem "font-awesome-rails"
