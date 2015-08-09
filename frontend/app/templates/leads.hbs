@@ -3,8 +3,14 @@
 	<ul>
 		{{#each lead in model}}
 			<li>
-				{{lead.fullName}}
+				{{#link-to "lead"}}
+					stuff
+				{{/link-to}}
 			</li>
 		{{/each}}
 	</ul>
 </article>
+
+{{outlet}}
+
+
