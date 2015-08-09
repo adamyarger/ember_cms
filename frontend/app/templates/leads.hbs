@@ -1,7 +1,11 @@
-<ul>
-	{{#each lead in model}}
-		<li>
-			{{lead.firstName}}
-		</li>
-	{{/each}}
-</ul>
+<article id='leads'>
+	<h1>Leads</h1>
+	<ul>
+		{{#each lead in model}}
+			<li>
+				{{lead.firstName}}
+				{{lead.lastName}}
+			</li>
+		{{/each}}
+	</ul>
+</article>
