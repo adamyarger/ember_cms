@@ -1,5 +1,7 @@
-// export default Ember.Route.extend({
-//   model() {
-//     return $.getJSON("http://localhost:3000/api/v1/leads");
-//   }
-// });
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+  model: function() {
+    return this.store.find('lead');
+  }
+});
