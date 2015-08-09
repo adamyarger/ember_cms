@@ -12,7 +12,7 @@ gem 'active_model_serializers'
 gem 'ember-cli-rails'
 gem 'faker'
 gem 'responders'
-gem 'puma'
+# gem 'puma'
 
 # design
 gem "font-awesome-rails"
