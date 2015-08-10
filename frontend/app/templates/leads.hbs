@@ -2,11 +2,9 @@
 	<h1>Leads</h1>
 	<ul>
 		{{#each lead in model}}
-			<li>
-				{{#link-to "lead" lead.id}}
-					{{lead.fullName}}
-				{{/link-to}}
-			</li>
+			{{#link-to "lead" lead tagName="li"}}
+				{{lead.fullName}}
+			{{/link-to}}
 		{{/each}}
 	</ul>
 </article>
