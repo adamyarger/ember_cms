@@ -3,5 +3,6 @@
 	<p>Name: {{model.fullName}}</p>
 	<p>Email: {{model.email}}</p>
 	<p>Phone: {{model.phone}}</p>
-	<p>Label Status: {{view Ember.Select content=model.STATUSES value=model.status}}</p>
+	<p>Status: {{view Ember.Select content=model.STATUSES value=model.status}}</p>
+	<p>Notes: {{view Ember.TextArea value=model.notes}}</p>
 </article>
