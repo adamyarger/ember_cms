@@ -9,6 +9,7 @@ export default DS.Model.extend({
   notes: DS.attr('string'),
   fullName: function() {
   	return this.get('firstName') + ' ' + this.get('lastName')
-  }.property('firstName', 'lastName')
+  }.property('firstName', 'lastName'),
+  STATUSES: ['new', 'in progress', 'closed', 'bad']
 });
 

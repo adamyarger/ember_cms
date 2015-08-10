@@ -11,11 +11,14 @@ class Api::V1::LeadsController < ApplicationController
 	end
 
 	def create
-		respond_with :api, :v1, Lead.create(lead_params)
+		@lead_create = Lead.create(lead_params)
+		# respond_with :api, :v1, Lead.create(lead_params)
+		render json: @lead
 	end
 
 	def update
-		respond_with lead.update(lead_params)
+		@lead_update = lead.update(lead_params)
+		render json: @lead
 	end
 
 	def destroy
