@@ -1,7 +1,7 @@
 <article id='leads'>
 	<h1>Leads</h1>
 	<ul>
-		{{#each lead in model}}
+		{{#each model as |lead|}}
 			{{#link-to "lead" lead tagName="li"}}
 				{{lead.fullName}}
 			{{/link-to}}
