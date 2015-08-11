@@ -15,8 +15,8 @@ class Api::V1::LeadsController < ApplicationController
 		@lead_create = Lead.create(lead_params)
 
 		if @lead.save
-			@lead.reload
-			render json: @lead, status: 201, location: [:api, @lead]
+			# @lead.reload
+			render json: @lead, status: 201, location: [:api, :v1, @lead]
 		else
 			render json: { errors: @lead.errors }, status: 422
 		end
@@ -26,7 +26,7 @@ class Api::V1::LeadsController < ApplicationController
 		@lead = Lead.find(params[:id])
 
 		if @lead.update(lead_params)
-			render json: @lead, status: 200, location: [:api, @lead]
+			render json: @lead, status: 200, location: [:api, :v1, @lead]
 		else
 			render json: { errors: @lead.errors }, status: 422
 		end
