@@ -4,7 +4,8 @@
 	<p>Email: {{model.email}}</p>
 	<p>Phone: {{model.phone}}</p>
 	<p>Status: {{view Ember.Select content=model.STATUSES value=model.status}}</p>
-	<p>Notes: {{view Ember.TextArea value=model.notes}}</p>
+	<p>Notes: {{textarea value=model.notes}}</p>
+	<button {{action 'saveChanges'}}>Save</button>
 
 	<button {{action 'delete'}}>Delete</button>
 </article>
