@@ -12,7 +12,7 @@ class Api::V1::LeadsController < ApplicationController
 	end
 
 	def create
-		@lead_create = Lead.create(lead_params)
+		@lead = Lead.create(lead_params)
 
 		if @lead.save
 			# @lead.reload
