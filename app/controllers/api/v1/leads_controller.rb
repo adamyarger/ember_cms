@@ -1,5 +1,5 @@
 class Api::V1::LeadsController < ApplicationController
-	
+	respond_to :json
 
 	def index
 		@leads = Lead.all
@@ -7,29 +7,38 @@ class Api::V1::LeadsController < ApplicationController
 	end
 
 	def show
-		render json: lead
+		@lead = Lead.find(params[:id])
+		render json: @lead
 	end
 
 	def create
 		@lead_create = Lead.create(lead_params)
-		# respond_with :api, :v1, Lead.create(lead_params)
-		render json: @lead
+
+		if @lead.save
+			@lead.reload
+			render json: @lead, status: 201, location: [:api, @lead]
+		else
+			render json: { errors: @lead.errors }, status: 422
+		end
 	end
 
 	def update
-		@lead_update = lead.update(lead_params)
-		render json: @lead
+		@lead = Lead.find(params[:id])
+
+		if @lead.update(lead_params)
+			render json: @lead, status: 200, location: [:api, @lead]
+		else
+			render json: { errors: @lead.errors }, status: 422
+		end
 	end
 
 	def destroy
-		respond_with lead.destroy
+		@lead = Lead.find(params[:id])
+		@lead.destroy
+		head 204
 	end
 
 	private
-
-		def lead
-			Lead.find(params[:id])
-		end
 
 		def lead_params
 			params.require(:lead).permit(:first_name, :last_name, :email, :phone, :status, :notes)
