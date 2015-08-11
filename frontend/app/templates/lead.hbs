@@ -6,7 +6,8 @@
 	<p>Status: {{view Ember.Select content=model.STATUSES value=model.status}}</p>
 	<p>Notes: {{textarea value=model.notes}}</p>
 	<button {{action 'saveChanges'}}>Save</button>
-	{{#if model.isDirty}}
+	
+	{{#if model.showUnsavedMessage}}
 		<div class="unsaved">unsaved changes</div>
 	{{/if}}
 	{{#if model.isSaving}}
