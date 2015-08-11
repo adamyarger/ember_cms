@@ -2,7 +2,7 @@
 	<h1>Leads</h1>
 	<ul>
 		{{#each model as |lead|}}
-			{{#link-to "lead.show" lead tagName="li"}}
+			{{#link-to "lead" lead tagName="li"}}
 				{{lead.fullName}}
 			{{/link-to}}
 		{{/each}}
